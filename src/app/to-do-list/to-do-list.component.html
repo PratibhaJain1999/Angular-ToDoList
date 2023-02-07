@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="input-group justify-content-center">
+            <input type="text" class="input text-center" placeholder="Enter ToDo" value="" [(ngModel)]="title">
+            <button type="button" class="btn btn-light" (click)="addList()"><b>AddList</b></button>
+        </div>
+    </div>
+    <br>
+    <div class="row ">
+        <div class="card" style="width: 800px; ">
+            <div class="card-body">
+                <ol type="1">
+                    <li *ngFor="let todo of toDoList; let id=index">{{todo.title}}
+                        <span class="fas fa-trash float-right" (click)="deleteValue(todo)"></span>
+                        <span class="fas fa-edit float-right cur-pointer" (click)="editValue(todo)"></span>
+                    </li>
+                    
+                </ol>
+            </div>
+            <button type="button" class="btn btn-light " id="clear" id="btn11" (click)="clearList()"><b>Clear List</b>
+            </button>
+        </div>
+    </div>
+    <div class="modal" id="myModal1" [ngClass] = "{'d-block' : showModal}">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h4 class="modal-title"><b><i>Edit items</i></b></h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="editValue" [(ngModel)]="editTitle">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success bttn11" (click)="saveModal()">Save</button>
+                <button type="button" class="btn btn-danger bttn11" data-dismiss="modal" >Cancel
+
+                </button>
+
+            </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+

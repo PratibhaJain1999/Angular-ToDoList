@@ -1,0 +1,43 @@
+input{
+    width: 65%;
+    border: 2px solid black;
+    padding: 7px;
+}
+button{
+    width: 15%;
+    border: 3px solid darkgreen;
+    padding: 2px;
+    font-size: 20px;
+}
+.card{
+    margin: auto;
+    height: 500px;
+}
+#clear{
+    width: 100%;
+}
+.bttn11{
+    border: none;
+    font-size: 18px;
+
+}
+#btn11{
+    border: 3px solid darkgreen;
+    width: 100%;
+    padding: 2px;
+    font-size: 20px;
+    margin: auto;
+}
+#editValue{
+    width: 100%;
+}
+.fa-trash{
+    color: red;
+    padding-left: 10px;
+}
+.fa-edit{
+    color:green;
+}
+.cur-pointer{
+    cursor: pointer;
+}
